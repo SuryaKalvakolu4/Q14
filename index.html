@@ -26,14 +26,14 @@
     </style>
 </head>
 <body>
-    <h1>Station 17</h1>
+    <h1>Material Rapid Filter</h1>
     <div id="question"></div>
     <div id="options"></div>
-    <button onclick="nextQuestion()">SUBMIT</button>
+    <button onclick="nextQuestion()">Submit</button>
     <script>
         // Function to clear the quiz score from local storage
 function clearQuizScore() {
-    localStorage.removeItem("Station_17_Score");
+    localStorage.removeItem("Material_Rapid_Filter");
 }
 
 // Function to clear local storage when the tab is closed or refreshed
@@ -55,7 +55,7 @@ window.addEventListener('beforeunload', function() {
         ];
 
         let currentQuestion = 0;
-        let Station_17_Score = 0;
+        let Material_Rapid_Filter = 0;
 
         // Function to display current question
         function displayQuestion() {
@@ -99,9 +99,9 @@ window.addEventListener('beforeunload', function() {
     }
 
     if (!isAnswered || selectedOption !== quiz[currentQuestion].answer) {
-        Station_17_Score = 0; // Assign zero score if question is not attempted or answered incorrectly
+        Material_Rapid_Filter = 0; // Assign zero score if question is not attempted or answered incorrectly
     } else {
-        Station_17_Score++; // Increment score for correct answer
+        Material_Rapid_Filter++; // Increment score for correct answer
     }
 }
 
@@ -112,8 +112,8 @@ window.addEventListener('beforeunload', function() {
 
             if (currentQuestion === quiz.length) {
                 // All questions answered, store score in local storage
-                localStorage.setItem("Station_17_Score", Station_17_Score);
-                alert("Quiz completed. Your score is " + Station_17_Score);
+                localStorage.setItem("Material_Rapid_Filter", Material_Rapid_Filter);
+                alert("Quiz completed. Your score is " + Material_Rapid_Filter);
             } else {
                 displayQuestion();
             }
